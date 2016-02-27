@@ -1,11 +1,12 @@
 package base;
+
 // Class named MyInteger
 class MyInteger {
 
 	/* int data field named iValue that stores the int value represented by this
 	 * object.
 	 */
-	int iValue;
+	private int iValue;
 
 	// A constructor that creates a MyInteger object for the specified iValue.
 	public MyInteger(int iValue) {
@@ -99,3 +100,28 @@ class MyInteger {
 	}
 
 }
+
+
+
+	class MyIntegerEncapsulation {
+ 		public static void main(String[] args) {
+ 			MyInteger encap = new MyInteger(3);
+
+ 			System.out.println("The number is " + encap.getiValue());
+ 			System.out.println("Is the number even? " + encap.isEven());
+ 			System.out.println("Is the number odd? " + encap.isOdd());
+ 			System.out.println("Is the number prime? " + encap.isPrime());
+ 			System.out.println("Is the number 20 prime? " + encap.isPrime(20));
+
+ 			MyInteger encap2 = new MyInteger(32);
+ 			System.out.println("The second number is " + encap2.getiValue());
+ 			System.out.println("Is the second number even? " + encap2.isEven());
+ 			System.out.println("Is the second number odd? " + encap2.isOdd());
+ 			System.out.println("Is the second number 4 even? " + encap2.isEven(4));
+ 			System.out.println("Is the second number 5 odd? " + encap2.isOdd(5));
+ 			System.out.println("Is the second number prime? " + encap2.isPrime());
+ 			System.out.println("Is the second number 11 prime? " + encap2.isPrime(11));
+ 			System.out.println("Is the second number equal to the first number? " + encap2.equals(encap));
+ 		}
+	}
+	
